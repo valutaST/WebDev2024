@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <title>Instagram</title>
+        <style>
+            body{
+                background-color: rgb(248, 248, 248);
+            }
+           
+            #leftpart {
+                display:block;
+                margin-top: 2%;
+                margin-left: 23%;
+                float: left;
+            }
+            #right {
+                width: 356px;
+                height: 00px;
+                float: right;
+                margin-top: 4%;
+                margin-right: 17%;
+               
+            }
+            #block {
+                background-color: white;
+                width: 356px;
+                height: 375px;
+                border: 1px split rgb(216, 214, 214);
+                border-color: gray;
+                float: right;
+                margin-top: 2px;
+                margin-right: 36%;
+    
+            }
+            #block2 {
+                background-color: white;
+                width: 356px;
+                height: 50px;
+                border: 1px split rgb(216, 214, 214);
+                border-color: gray;
+                float: right;
+                margin-top: 20px;
+                margin-right: 36%;
+                text-align: center;
+            }
+            #vhod {
+                background-color: #418cee;
+                color: white;
+                margin-left: 43px;
+                margin-top: 15px;
+                width: 270px;
+                height: 32px;
+                border-color:#3b83e2;
+                border-radius: 4px;
+                font-size: 12px;
+                cursor: pointer;
+                
+            }
+        
+            .vvod {
+                margin-left: 43px;
+                margin-top: 10px;
+                width: 270px;
+                height: 37px;
+                border-radius: 4px;
+                border-color:rgb(221, 218, 218);
+                color:rgb(177, 176, 176);
+                font-size: 12px;
+                background-color: rgb(248, 248, 248);
+            }
+            
+            #f_password {
+                color:#0d5880;
+                cursor: pointer;
+                text-align: center;
+                
+            }
+            #f {
+                font-size: 13px;
+                
+            }
+            #or {
+                color:rgb(102, 99, 99);
+                text-align:center;
+                position: relative;
+                display:flex;
+                justify-content: space-between;
+                left:170px;
+            }
+            
+            a:hover {
+                
+                cursor: pointer;
+            }
+        
+            #undtext{
+                width: 400px;
+                float: right;
+                margin-top: 22px;
+                margin-right: 100px;
+                font-size: 15px;
+                font-family: serif;
+                text-align: center;
+            }
+            
+            #signup {
+                color:#39a5ed;
+            }
+            a {
+                cursor: pointer;
+            }
+            .img {
+                cursor: pointer;
+            }
+            #img {
+                width: 356px;
+                height: 100px;
+                float: right;
+                margin-top: 7px;
+                margin-right: 20%;
+            }
+            .logo{
+                float: center;
+                
+                background-position: 0px 0px; 
+                background-size: 176px 264px;
+                background-repeat: no-repeat;
+                display: inline-block;
+                
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <div id="leftpart">
+       <img src="inst.png" width="400">
+    </div>
+    <div id="right">
+    <div id="block">
+        <img class="logo" style="margin:20px" src="h.png" width="200" cursor="pointer" >
+        <input class="vvod" placeholder="Телефон, имя пользователя или эл.адрес" type="text">
+        <input class="vvod" placeholder="Пароль" type="password"/>
+        <input  id="vhod" type="submit" value="Войти" />
+        
+        <p id="or">или</p>
+
+        <p id="f_password"><a>Войти через Facebook</a><br><br><a id="f">Забыли пароль?</a></p>
+       
+    </div>
+    <div id="block2"><p>У вас еще нет аккаунта? <a id="signup">Зарегистрироваться</a></p></div>
+        <p id="undtext"> Установите приложение.</p>
+        <div id="img">
+    <img class="img"  src="app.png"> 
+    <img class="img"  src="google.png">   
+    </div>
+    </div>
+    </body>
+</html>

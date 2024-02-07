@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>Facebook - выполните вход или зарегистрируйтесь</title>
+        <style>
+            body{
+                background-color: rgb(236, 239, 240);
+            }
+            #logo {
+                font-size: 62px;
+                color:#008ad3;
+                font-family: Segoe UI;
+            }
+            #text {
+                font-size: 28px;
+                font-family: sans-serif;
+                color:rgb(33, 33, 33);
+                font-weight: normal;    
+            }
+            
+            #leftpart {
+                display:block;
+                margin-top: 10%;
+                margin-left: 16%;
+                line-height: 30px;
+                float: left;
+            }
+            #right {
+                width: 400px;
+                float: right;
+                margin-top: 6%;
+                margin-right: 13%;
+            }
+            #block {
+                background-color: white;
+                border-radius: 8px;
+                width: 400px;
+                height: 350px;
+                box-shadow: 0 0 10px 5px rgb(208, 207, 207);
+                float: right;
+                margin-top: 10%;
+                margin-right: 18%;
+    
+            }
+            #vhod {
+                background-color: #3b83e2;
+                color: white;
+                margin-left: 15px;
+                margin-top: 15px;
+                width: 370px;
+                height: 50px;
+                border-radius: 6px;
+                border-color:#3b83e2;
+                font-size: 20px;
+                cursor: pointer;
+                
+            }
+            #vhod:hover {
+                background-color: #3175ce;
+            }
+            .vvod {
+                margin-left: 15px;
+                margin-top: 15px;
+                width: 370px;
+                height: 50px;
+                border-radius: 6px;
+                border-color:rgb(221, 218, 218);
+                color:rgb(177, 176, 176);
+                font-size: 15px;
+            }
+            .vvod:focus {
+                box-shadow: 0 0 5px 1px rgb(73, 143, 235);
+            }
+            #f_password {
+                color:#008ad3;
+                cursor: pointer;
+                text-align: center;
+                
+            }
+            
+            a:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            #new {
+                background-color: rgb(61, 206, 61);
+                color: white;
+                margin-left: 20%;
+                margin-top: 25px;
+                width: 230px;
+                height: 50px;
+                border-radius: 6px;
+                border-color: rgb(61, 206, 61);
+                font-size: 17px;
+                cursor: pointer;
+                
+            }
+            #new:hover {
+                background-color: rgb(45, 167, 45);
+            }
+            #solid {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            #undtext{
+                width: 400px;
+                float: right;
+                margin-top: 22px;
+                margin-right: 70px;
+                font-size: 15px;
+                font-family: serif;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="leftpart">
+       <h1 id="logo">facebook</h1>
+        <h3 id="text">Facebook помогает вам всегда <br>оставаться на связи и общаться со <br>своими знакомыми.</h3>
+    </div>
+    <div id="right">
+    <div id="block">
+        <input class="vvod" placeholder="Электронный адрес или номер телефона" type="text">
+        <input class="vvod" placeholder="Пароль" type="password"/>
+        <input  id="vhod" type="submit" value="Вход" />
+        
+        <p id="f_password"><a >Забыли пароль?</a></p>
+        <div id="solid" style="border-bottom: solid 1px rgb(221, 218, 218);"></div>
+        <button id="new"><strong>Создать новый аккаунт</strong></button>
+    </div>
+        <p id="undtext"><a><strong>Создать страницу</strong></a> знаменитости, музыкальной группы или компании.</p>
+    </div>
+    </body>
+</html>
