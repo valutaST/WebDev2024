@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ToDo list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+        #heading {
+            background-color: black;
+            color: cornsilk;
+            width: 100%;
+            height: 30px;
+            font-size: 14px;
+            text-align: center;
+            border-radius: 4px;
+            
+        }
+        #add {
+            background-color: black;
+            color: cornsilk;
+            width: 40px;
+            height: 30px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-left: 1%;
+        }
+        .vvod {
+            width: 500px;
+            height: 30px;
+            font-size: 14px;
+            border-radius: 4px;
+            margin-left: 8%;
+        }
+        #list {
+            margin-left: 30%;
+            margin-top: 5%;
+            
+        }
+        .container {
+            border: solid 1px;
+            width: 500px;
+            font-size: 14px;
+            border-radius: 4px;
+            margin-left: 8%;
+            margin-top: 30px;
+            background-color: rgba(136, 129, 129, 0.255);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+        }
+        .container:hover {
+            cursor: pointer;
+        }
+        .container input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .container .delete-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .task-text {
+            flex-grow: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    </style>
+    <script>
+        function onClick() {
+            let value = document.getElementById('text').value;
+            if (!value)
+                return;
+            let container = document.createElement('div');
+            container.className = "container";
+            container.innerHTML = '<input type="checkbox" onclick="toggleLineThrough(this)"><span class="task-text">' + value + '</span><button class="delete-button" onclick="deleteItem(this)"><i class="fas fa-trash-alt"></i></button>';
+            document.getElementById('itemlist').appendChild(container);
+            document.getElementById('text').value = "";
+        }
+
+        function deleteItem(element) {
+            element.parentNode.remove();
+        }
+
+        function toggleLineThrough(checkbox) {
+            let container = checkbox.parentNode;
+            if (checkbox.checked) {
+                container.style.textDecoration = "line-through";
+            } else {
+                container.style.textDecoration = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="heading">
+    <h2>ToDo List</h2>
+</div>
+<div id="list">
+    <h1>ToDo list</h1>
+    <input id="text" class="vvod" placeholder="New Task" type="text">
+    <button id="add" onclick="onClick()">Add</button>
+    <div id="itemlist">
+    </div>
+</div>
+</body>
+</html>
