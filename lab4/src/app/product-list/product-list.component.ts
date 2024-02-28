@@ -8,16 +8,22 @@ import { products } from '../products';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products = products;
+  products = [...products];
 
-  share() {
-    window.alert('The product has been shared!');
+  
+  share(product: any) {
+    const message = `Check out this product: ${product.name}. Link: ${product.link}`;
+  
+    window.location.href = `tg://msg?text=${encodeURIComponent(message)}`;
+
   }
 
-  onNotify(){
+
+  onNotify() {
     window.alert('You will be notified when the product goes on sale');
   }
 }
+
 
 
 /*
