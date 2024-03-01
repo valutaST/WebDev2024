@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Category, categories } from '../categories';
+import { Product } from '../products';
 
 import { products } from '../products';
 
@@ -9,8 +11,25 @@ import { products } from '../products';
 })
 export class ProductListComponent {
   products = [...products];
-
+  categories: Category[] = categories;
+  selectedCategory?: Category;
   
+  onSelectCategory(category: Category): void {
+    this.selectedCategory = category;
+  }
+
+  removeProduct(product: Product): void {
+    // Implement logic to remove the product from the selected category
+    if (this.selectedCategory) {
+      this.selectedCategory.products = this.selectedCategory.products.filter(p => p !== product);
+    }
+  }
+
+  likeProduct(product: Product): void {
+    // Increment the likes for the selected product
+    product.likes++;
+  }
+
   share(product: any) {
     const message = `Check out this product: ${product.name}. Link: ${product.link}`;
   

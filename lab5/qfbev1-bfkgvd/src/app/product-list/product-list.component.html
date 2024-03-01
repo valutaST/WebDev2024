@@ -1,0 +1,28 @@
+<h2>Категории</h2>
+<ul>
+  <li *ngFor="let category of categories">
+    <a (click)="onSelectCategory(category)">{{ category.name }}</a>
+  </li>
+</ul>
+
+<h2 *ngIf="selectedCategory">Продукты в {{ selectedCategory.name }}</h2>
+<div *ngIf="selectedCategory">
+  <div *ngFor="let product of selectedCategory.products">
+    <h3>{{ product.name }}</h3>
+    <img [src]="product.image" alt="Product Image" style="max-width: 100px;">
+    <p>Описание: {{ product.description }}</p>
+    <p>Рейтинг: {{ product.rating }}</p>
+    
+    <button type="button" (click)="share(product)">
+      Share
+    </button> 
+
+    <app-product-alerts
+      [product]="product"
+      (notify)="onNotify()">
+    </app-product-alerts>
+    <p>Likes: {{ product.likes }}</p>
+    <button (click)="likeProduct(product)">Like</button>
+    <button (click)="removeProduct(product)">Remove</button>
+  </div>
+</div>
