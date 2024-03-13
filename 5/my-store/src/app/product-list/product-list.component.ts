@@ -19,14 +19,12 @@ export class ProductListComponent {
   }
 
   removeProduct(product: Product): void {
-    // Implement logic to remove the product from the selected category
     if (this.selectedCategory) {
       this.selectedCategory.products = this.selectedCategory.products.filter(p => p !== product);
     }
   }
 
   likeProduct(product: Product): void {
-    // Increment the likes for the selected product
     product.likes++;
   }
 
