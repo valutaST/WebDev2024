@@ -15,14 +15,6 @@ export class PostsService {
   constructor(private client: HttpClient) {
   }
 
-  // getPosts() {
-  //   return of(POSTS);
-  // }
-  //
-  // getPost(id: number) {
-  //   const post = POSTS.find((x) => x.id === id);
-  //   return of(post);
-  // }
 
 
   getPosts(): Observable<Post[]> {
