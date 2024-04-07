@@ -1,4 +1,5 @@
 import math
-a = int(input())
-b = int(input())
-print(math.sqrt(b*b + a*a))
+a = [1, 2, 3, 4, 5, 6]
+
+for i in range (a)
+    
